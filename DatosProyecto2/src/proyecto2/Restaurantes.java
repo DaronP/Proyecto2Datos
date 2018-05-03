@@ -10,5 +10,18 @@ package proyecto2;
  * @author Andres
  */
 public class Restaurantes {
+
+    private String name;
+    private String food;
+    private String cost;
+    private String kind;
+    
+    public Restaurantes(String nombre, String tipoComida, String costo, String tipo) {
+        name = nombre;
+        food = tipoComida;
+        cost = costo;
+        kind = tipo;
+    }
+    
     
 }

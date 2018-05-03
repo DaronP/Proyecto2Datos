@@ -9,6 +9,21 @@ package proyecto2;
  *
  * @author Andres
  */
+
+import java.util.*;
+
 public class Main {
+    
+    public static void main(String [] args){
+        
+        
+        HashMap<Integer, Restaurantes> HMap = new HashMap<Integer, Restaurantes>();
+        
+        Restaurantes mc = new Restaurantes("McDonalds", "Hamburguesas", "Medio", "Rapida");
+        
+        HMap.put(1, mc);
+        
+        System.out.println(HMap.get("Medio"));
+    }
     
 }
