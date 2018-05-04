@@ -18,8 +18,8 @@ public class Main {
     public static void main(String [] args){
         
         Scanner sc = new Scanner(System.in);
-        HashMap<String, List> HMap = new HashMap<String, List>();
-        List<String> parametros;
+        HashMap<String, ArrayList> HMap = new HashMap<String, ArrayList>();
+        ArrayList<String> parametros;
         Boolean  x = true;
         System.out.println("holis");
         
@@ -30,7 +30,10 @@ public class Main {
             String costo = sc.next();
             String tipo = sc.next();
             
-            parametros = new LinkedList<String>(tipoCo, costo, tipo);
+            parametros = new ArrayList<String>();
+            parametros.add(tipoCo);
+            parametros.add(costo);
+            parametros.add(tipo);
             
             
             HMap.put(nombre, parametros);
