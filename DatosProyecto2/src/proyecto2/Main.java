@@ -18,7 +18,7 @@ public class Main {
     public static void main(String [] args){
         
         Scanner sc = new Scanner(System.in);
-        HashMap<String, ArrayList> HMap = new HashMap<String, ArrayList>();
+        HashMap<String, ArrayList> map = new HashMap<String, ArrayList>();
         ArrayList<String> parametros;
         Boolean  x = true;
         System.out.println("holis");
@@ -35,9 +35,10 @@ public class Main {
             parametros.add(costo);
             parametros.add(tipo);
             
+            //se anade al mapa
+            map.put(nombre, parametros);
             
-            HMap.put(nombre, parametros);
-            
+            //debuggeando
             System.out.println("Si o no?");
             String val = sc.next();
             if(val.equals("si")){
@@ -45,8 +46,8 @@ public class Main {
             }
             
         }
-        
-        System.out.println(HMap);
+        map.remove("Mc", "d");
+        System.out.println(map);
         
         
     }
