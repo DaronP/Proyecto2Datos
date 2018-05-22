@@ -23,5 +23,18 @@ public class Restaurantes {
         kind = tipo;
     }
     
+    public String getNombre(){
+        return name;
+    }
+    public String getComida(){
+        return food;
+    }
+    public String getCosto(){
+        return cost;
+    }
+    public String getTipo(){
+        return kind;
+    }
+    
     
 }
