@@ -34,9 +34,18 @@ public class Conexion {
     }
 
 
-    public void crearRestaurante(Restaurantes r){
+    public void crearRestaurante(Restaurante r){
         try {
             stmt.executeUpdate("CREATE(" +r.getNombre()+ ":Restaurante{restaurante:'" + r.getNombre() + "',comida:'" + r.getComida() +  "',costo:'" +r.getCosto() + "',tipo:'" +r.getTipo()+ "'})");
+            con.close();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+    }
+    
+ public void crearUsuario(Usuario u){
+        try {
+            stmt.executeUpdate("CREATE(" +u.getName()+ ":Usuario{nombre:'" +u.getName() + "',interes1:'" + u.getInteres1() +  "',interes2:'" +u.getInteres2()+ "',interes3:'" +u.getInteres3()+ "',interes4:'" +u.getInteres4()+ "'})");
             con.close();
         } catch (SQLException e1) {
             e1.printStackTrace();
